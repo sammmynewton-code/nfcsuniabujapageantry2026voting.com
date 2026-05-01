@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFCS UNIABUJA PAGEANTRY 2026 — Vote for Your Winner</title>
+  <meta name="description"
+    content="Vote for your favorite contestant in the Crown of Grace Pageant 2026. Follow their Instagram page to cast your vote — one follow, one vote!">
+  <meta property="og:title" content="Crown of Grace Pageant 2026 — Vote Now">
+  <meta property="og:description"
+    content="Support your favorite contestant by following their Instagram page. Every follower counts as a vote!">
+  <meta property="og:type" content="website">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-particles"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-brand">
+        <span class="nav-crown">👑</span>
+        <span class="nav-title">NFCS UNIABUJA PAGEANTRY 2026</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#contestants">Contestants</a></li>
+        <li><a href="#leaderboard">Leaderboard</a></li>
+        <li><a href="#rules">Rules</a></li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        Voting is Live
+      </div>
+      <h1>
+        Vote for Your<br>
+        <span class="gold-text">Next Mr/Miss NFCS</span>
+      </h1>
+      <p>Support your favorite contestant by following their Instagram page. Every follower is a vote — simple,
+        transparent, and fair.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="stat-number" id="total-contestants">11</div>
+          <div class="stat-label">Contestants</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-number" id="total-votes">0</div>
+          <div class="stat-label">Total Votes</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-number">2026</div>
+          <div class="stat-label">Season</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-it-works reveal" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Simple & Transparent</span>
+        <h2>How Voting Works</h2>
+        <p>Cast your vote in three easy steps — powered by Instagram.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">👀</div>
+          <h3>Choose Your Contestant</h3>
+          <p>Browse through our stunning contestants and find the one who inspires you the most.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">📱</div>
+          <h3>Follow on Instagram</h3>
+          <p>Click "Vote Now" to open the NFCS UNIABUJA Instagram page. Hit that follow button to cast your vote.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">✅</div>
+          <h3>Vote Counted!</h3>
+          <p>Your follow equals one vote. You can only follow once, so every vote is unique and fair.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTESTANTS ===== -->
+  <section class="contestants-section reveal" id="contestants">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Meet the Contestants</span>
+        <h2>Our Contestants</h2>
+        <p>Click "Vote Now" to follow their Instagram and cast your vote.</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="search-input" id="search-input" placeholder="Search contestants by name...">
+        </div>
+        <button class="sort-btn active" data-sort="votes">
+          🏆 Sort by Votes
+        </button>
+        <button class="sort-btn" data-sort="name">
+          🔤 Sort by Name
+        </button>
+      </div>
+
+      <!-- Grid -->
+      <div class="contestants-grid" id="contestants-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEADERBOARD ===== -->
+  <section class="leaderboard-section reveal" id="leaderboard">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Live Rankings</span>
+        <h2>Leaderboard</h2>
+        <p>See who's leading the race for the crown.</p>
+      </div>
+      <table class="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Contestant</th>
+            <th>Votes</th>
+            <th>Progress</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-body">
+          <!-- Rendered by JS -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== RULES ===== -->
+  <section class="rules-section reveal" id="rules">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Fair Play</span>
+        <h2>Voting Rules</h2>
+        <p>Ensuring transparency and fairness for all contestants.</p>
+      </div>
+      <div class="rules-grid">
+        <div class="rule-card">
+          <span class="rule-icon">1️⃣</span>
+          <div>
+            <h4>One Follow = One Vote</h4>
+            <p>Each Instagram follow on the NFCS UNIABUJA's page counts as one vote. Simple and transparent.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-icon">🚫</span>
+          <div>
+            <h4>No Duplicate Votes</h4>
+            <p>Instagram prevents you from following the same account twice, so every vote is unique.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-icon">📊</span>
+          <div>
+            <h4>Real-Time Tracking</h4>
+            <p>Follower counts are tracked and updated to reflect the latest voting standings.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-icon">🤝</span>
+          <div>
+            <h4>Fair & Equal</h4>
+            <p>All contestants start from the same baseline. No purchased followers or bots allowed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        <span class="crown">👑</span>
+        <span class="brand-text">NFCS UNIABUJA PAGEANTRY 2026</span>
+      </div>
+      <p>&copy; NFCS UNIABUJA PAGEANTRY 2026. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
